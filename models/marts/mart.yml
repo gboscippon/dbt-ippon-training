@@ -1,0 +1,24 @@
+vars:
+  # The `platforms` variable is only accessible to resources in the my_dbt_project project
+  --marts:
+  nb_restaurants_to_show: 5
+
+models:
+  - name: mart_restaurant_turnover_orderded
+    description: This is a unique identifier for the event
+    columns:
+      - name: CA
+        description: CA des commandes du restaurants
+        tests:
+          - unique
+          - not_null
+
+      - name: NAME_RESTAURANT
+        description: Nom du restaurant
+        tests:
+        - not_null
+      
+      - name: RANK_R
+        description: Rang du restaurant
+        tests:
+        - not_null

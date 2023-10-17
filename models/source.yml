@@ -1,0 +1,17 @@
+sources:
+  - name: Norbert
+    database: DB_DBT_GBOSC_DEV
+    schema: SOURCE
+
+    tables:
+      - name: RESTAURANTS
+      - name: FUZZY_ORDERS
+      - name: DISHES
+      - name: ORDERS
+        columns:
+        - name: IDENTIFIER
+          description: Id des orders
+          tests:
+            - unique
+            - not_null
+        
