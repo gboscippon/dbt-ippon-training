@@ -4,4 +4,4 @@
     {%else %} 
     {{source(dbt_source, dbt_table)}}
     {%endif%} 
-{% endmacro %}
+{% endmacro %} 
