@@ -24,6 +24,9 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+vars:
+  # The `platforms` variable is only accessible to resources in the my_dbt_project project
+  nb_restaurants_to_show: 5
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -32,3 +35,9 @@ models:
   dbt_ippon_training:
     # Config indicated by + and applies to all files under models/
     +materialized: table
+    staging:
+      +materialized: table
+
+seeds:
+  samples:
+  +schema: sample 

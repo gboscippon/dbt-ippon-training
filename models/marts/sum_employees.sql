@@ -1,0 +1,1 @@
+select sum(nb_employees) count_em from {{ref('restaurants')}}

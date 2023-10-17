@@ -1,0 +1,1 @@
+select * from {{ mackable_source('Norbert', 'ORDERS','sample_orders') }} 
