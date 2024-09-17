@@ -1,5 +1,5 @@
 select 
-count(*) 
+count(*) count_item
 from {{ref('fuzzy_wuzzy')}} fuzzy_w
 left join {{ref('base_dishes')}} dis on dis.name = fuzzy_w.dish_name
 where 

@@ -40,4 +40,4 @@ models:
 
 seeds:
   samples:
-  +schema: sample 
+  +schema:  sample 
